@@ -2,7 +2,7 @@ package skeleton;
 
 import java.util.List;
 import java.util.concurrent.TimeUnit;
-
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -26,8 +26,8 @@ public class Stepdefs {
 	static int numberOfProducts; 
 	@Given("Alex is on the login page")
 	public void alex_is_on_the_login_page() {
-		System.setProperty("webdriver.gecko.driver", "C:\\Users\\abhishek.panwar\\Desktop\\Drivers\\geckodriver-v0.24.0-win64\\geckodriver.exe");
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver", "C:\\drivers\\chromedriver_win32 (1)\\chromedriver.exe");
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get("http://10.232.237.143:443/TestMeApp/login.htm");
